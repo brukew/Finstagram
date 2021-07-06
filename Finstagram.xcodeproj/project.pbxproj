@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		1A62D4BD2694E75F000AA0A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D4BC2694E75F000AA0A2 /* main.m */; };
 		1A62D4C72694E75F000AA0A2 /* FinstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D4C62694E75F000AA0A2 /* FinstagramTests.m */; };
 		1A62D4D22694E75F000AA0A2 /* FinstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D4D12694E75F000AA0A2 /* FinstagramUITests.m */; };
+		1A62D4E22694EC8B000AA0A2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D4E12694EC8B000AA0A2 /* LoginViewController.m */; };
+		1A62D4E52694F249000AA0A2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D4E42694F249000AA0A2 /* SignUpViewController.m */; };
 		9780B70F42408B371407CB9A /* Pods_FinstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450C84CFA4838E0140B40D23 /* Pods_FinstagramTests.framework */; };
 		B0B2867B3B84BA7745F0C0F0 /* Pods_Finstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53FC88C7391CD06E316AF18 /* Pods_Finstagram.framework */; };
 		D72C9375D903E9875E6D74A9 /* Pods_Finstagram_FinstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932A457F7FD86E299166FEE8 /* Pods_Finstagram_FinstagramUITests.framework */; };
@@ -57,6 +59,10 @@
 		1A62D4CD2694E75F000AA0A2 /* FinstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A62D4D12694E75F000AA0A2 /* FinstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinstagramUITests.m; sourceTree = "<group>"; };
 		1A62D4D32694E75F000AA0A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A62D4E02694EC8B000AA0A2 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		1A62D4E12694EC8B000AA0A2 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1A62D4E32694F249000AA0A2 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		1A62D4E42694F249000AA0A2 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		2AAB349911D206C12C68E15A /* Pods-Finstagram-FinstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finstagram-FinstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finstagram-FinstagramUITests/Pods-Finstagram-FinstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		450C84CFA4838E0140B40D23 /* Pods_FinstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		465A5D047A41800B1E8F7FB7 /* Pods-FinstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinstagramTests.release.xcconfig"; path = "Target Support Files/Pods-FinstagramTests/Pods-FinstagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		1A62D4A92694E75D000AA0A2 /* Finstagram */ = {
 			isa = PBXGroup;
 			children = (
+				1A62D4DF2694EC6E000AA0A2 /* View Controllers */,
 				1A62D4AA2694E75D000AA0A2 /* AppDelegate.h */,
 				1A62D4AB2694E75D000AA0A2 /* AppDelegate.m */,
 				1A62D4AD2694E75D000AA0A2 /* SceneDelegate.h */,
@@ -154,6 +161,17 @@
 			path = FinstagramUITests;
 			sourceTree = "<group>";
 		};
+		1A62D4DF2694EC6E000AA0A2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A62D4E02694EC8B000AA0A2 /* LoginViewController.h */,
+				1A62D4E12694EC8B000AA0A2 /* LoginViewController.m */,
+				1A62D4E32694F249000AA0A2 /* SignUpViewController.h */,
+				1A62D4E42694F249000AA0A2 /* SignUpViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		9179F7B030F566C745C1337F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +192,6 @@
 				6D7277EBDE637418CA14C797 /* Pods-FinstagramTests.debug.xcconfig */,
 				465A5D047A41800B1E8F7FB7 /* Pods-FinstagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -417,8 +434,10 @@
 			files = (
 				1A62D4B22694E75D000AA0A2 /* ViewController.m in Sources */,
 				1A62D4AC2694E75D000AA0A2 /* AppDelegate.m in Sources */,
+				1A62D4E52694F249000AA0A2 /* SignUpViewController.m in Sources */,
 				1A62D4BD2694E75F000AA0A2 /* main.m in Sources */,
 				1A62D4AF2694E75D000AA0A2 /* SceneDelegate.m in Sources */,
+				1A62D4E22694EC8B000AA0A2 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
