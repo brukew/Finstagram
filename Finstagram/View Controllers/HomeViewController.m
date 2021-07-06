@@ -9,8 +9,12 @@
 #import "Parse/Parse.h"
 #import "LoginViewController.h"
 #import "AppDelegate.h"
+#import "ComposeViewController.h"
+#import "PostCell.h"
 
-@interface HomeViewController ()
+@interface HomeViewController () <ComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *arrayOfPosts;
 
 @end
 
@@ -18,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 - (IBAction)logOutUser:(id)sender {
@@ -31,15 +36,31 @@
     appDelegate.window.rootViewController = loginViewController;
     }
 
+- (IBAction)composePost:(id)sender {
+    [self performSegueWithIdentifier:@"composeSegue" sender:nil];
+}
 
-/*
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    PostCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
+    return cell;
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqual:@"composeSegue"]){
+        UINavigationController *navigationController = [segue destinationViewController];
+        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+        composeController.delegate = self;
+    }
 }
-*/
+
 
 @end
