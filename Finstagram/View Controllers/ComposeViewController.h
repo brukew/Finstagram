@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ComposeViewControllerDelegate
 
-- (void)didShare:(Post *)post;
+- (void)didShare;
 
 @end
 

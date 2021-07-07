@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Hello");
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTapped:)];
       
       // Optionally set the number of required taps, e.g., 2 for a double click
@@ -31,7 +30,6 @@
       [self.postImageView addGestureRecognizer:tapGestureRecognizer];
 }
 - (IBAction)photoTapped:(UITapGestureRecognizer *)sender {
-    NSLog(@"YOOOOOOO");
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
@@ -41,7 +39,6 @@
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
     else {
-        NSLog(@"Camera 🚫 available so we will use photo library instead");
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
 
@@ -53,7 +50,7 @@
     // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
-    self.resizedImage = [self resizeImage:editedImage withSize:CGSizeMake(300, 300)];
+    self.resizedImage = [self resizeImage:editedImage withSize:CGSizeMake(398, 398)];
     
     
 
@@ -66,7 +63,9 @@
 
 - (IBAction)sharePost:(id)sender {
     [Post postUserImage: self.resizedImage withCaption: self.captionField.text withCompletion: nil];
+    [self.delegate didShare];
     [self dismissViewControllerAnimated:YES completion:nil];
+    
     
 }
 
