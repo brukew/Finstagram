@@ -75,7 +75,6 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
 }
 
 - (void)didShare{
-    NSLog(@"Refresh");
     [self refresh];
 }
 

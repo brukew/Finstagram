@@ -22,20 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTapped:)];
-      
-      // Optionally set the number of required taps, e.g., 2 for a double click
-      tapGestureRecognizer.numberOfTapsRequired = 1;
-      
-      // Attach it to a view of your choice. If it's a UIImageView, remember to enable user interaction
-      [self.postImageView setUserInteractionEnabled:YES];
-      [self.postImageView addGestureRecognizer:tapGestureRecognizer];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [self.postImageView setUserInteractionEnabled:YES];
+    [self.postImageView addGestureRecognizer:tapGestureRecognizer];
 }
+
 - (IBAction)photoTapped:(UITapGestureRecognizer *)sender {
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
 
-    // The Xcode simulator does not support taking pictures, so let's first check that the camera is indeed supported on the device before trying to present it.
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
@@ -48,16 +44,12 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     self.resizedImage = [self resizeImage:editedImage withSize:CGSizeMake(398, 398)];
     
-    
-
-    // Do something with the images (based on your use case)
     self.postImageView.image = self.resizedImage;
-    // Dismiss UIImagePickerController to go back to your original view controller
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -67,6 +59,7 @@
     self.captionField.text = @"Write a caption...";
     [self.postImageView setImage:[UIImage imageNamed:@"image_placeholder.png"]];
     [self.delegate didShare];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [self.tabBarController setSelectedIndex:0];
     
     
