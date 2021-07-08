@@ -18,8 +18,8 @@
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     if (PFUser.currentUser) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UINavigationController *homeFeedNavController = [storyboard instantiateViewControllerWithIdentifier:@"HomeNavigationViewController"];
-        self.window.rootViewController = homeFeedNavController;
+        UINavigationController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
+        self.window.rootViewController = tabBarController;
     }
 }
 

@@ -15,6 +15,7 @@
 #import "Parse/PFImageView.h"
 #import "DetailsViewController.h"
 #import "InfiniteScrollActivityView.h"
+#import "DateTools.h"
 
 @interface HomeViewController () <DetailsViewControllerDelegate, ComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -135,11 +136,8 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSLog(@"%@", self.arrayOfPosts[indexPath.section]);
-    cell.postImageView.file = self.arrayOfPosts[indexPath.section][@"image"];
-    [cell.postImageView loadInBackground];
-    cell.captionLabel.text = self.arrayOfPosts[indexPath.section][@"caption"];
-    cell.userLabel.text = self.arrayOfPosts[indexPath.section][@"author"][@"username"];
+    cell.post = self.arrayOfPosts[indexPath.section];
+    [cell loadData];
     return cell;
 }
 
@@ -174,7 +172,7 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
         UITableViewCell *tappedCell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
         DetailsViewController *detailsController = [segue destinationViewController];
-        detailsController.post = self.arrayOfPosts[indexPath.row];
+        detailsController.post = self.arrayOfPosts[indexPath.section];
         detailsController.delegate = self;
     
 }

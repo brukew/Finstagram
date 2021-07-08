@@ -8,6 +8,8 @@ target 'Finstagram' do
   # Pods for Finstagram
   pod 'Parse'
   pod 'Parse/UI'
+  pod 'DateTools'
+  pod 'AFNetworking'
   target 'FinstagramTests' do
     inherit! :search_paths
     # Pods for testing

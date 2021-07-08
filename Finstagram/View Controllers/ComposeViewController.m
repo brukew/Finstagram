@@ -7,6 +7,7 @@
 
 #import "ComposeViewController.h"
 #import "Post.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ComposeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -63,8 +64,10 @@
 
 - (IBAction)sharePost:(id)sender {
     [Post postUserImage: self.resizedImage withCaption: self.captionField.text withCompletion: nil];
+    self.captionField.text = @"Write a caption...";
+    [self.postImageView setImage:[UIImage imageNamed:@"image_placeholder.png"]];
     [self.delegate didShare];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tabBarController setSelectedIndex:0];
     
     
 }
