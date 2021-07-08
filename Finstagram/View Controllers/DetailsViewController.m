@@ -18,7 +18,6 @@
     self.postImageView.file = self.post[@"image"];
     [self.postImageView loadInBackground];
     self.captionLabel.text = self.post[@"caption"];
-    NSLog(@"%@", self.post[@"createdAt"]);
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"E MMM d HH:mm:ss Z y";
     formatter.dateStyle = NSDateFormatterShortStyle;
