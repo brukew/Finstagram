@@ -48,13 +48,9 @@
     }
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
-        if (error != nil) {
-            NSLog(@"User log in failed: %@", error.localizedDescription);
-        } else {
-            NSLog(@"User logged in successfully");
+        if (error == nil) {
+
             [self performSegueWithIdentifier:@"LogInSegue" sender:nil];
-            
-            // display view controller that needs to shown after successful login
         }
     }];
 }

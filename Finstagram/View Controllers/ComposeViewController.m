@@ -25,6 +25,7 @@
     tapGestureRecognizer.numberOfTapsRequired = 1;
     [self.postImageView setUserInteractionEnabled:YES];
     [self.postImageView addGestureRecognizer:tapGestureRecognizer];
+    self.captionField.placeholder = @"Write a caption...";
 }
 
 - (IBAction)photoTapped:(UITapGestureRecognizer *)sender {

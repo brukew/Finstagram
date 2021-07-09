@@ -26,6 +26,7 @@
 		1A62D4FC26965FB0000AA0A2 /* InfiniteScrollActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D4FB26965FB0000AA0A2 /* InfiniteScrollActivityView.m */; };
 		1A62D4FF26979594000AA0A2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D4FE26979594000AA0A2 /* ProfileViewController.m */; };
 		1A62D5022697B2DA000AA0A2 /* ProfilePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D5012697B2DA000AA0A2 /* ProfilePostCell.m */; };
+		1A62D5052698E2AE000AA0A2 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62D5042698E2AE000AA0A2 /* EditProfileViewController.m */; };
 		9780B70F42408B371407CB9A /* Pods_FinstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450C84CFA4838E0140B40D23 /* Pods_FinstagramTests.framework */; };
 		B0B2867B3B84BA7745F0C0F0 /* Pods_Finstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53FC88C7391CD06E316AF18 /* Pods_Finstagram.framework */; };
 		D72C9375D903E9875E6D74A9 /* Pods_Finstagram_FinstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932A457F7FD86E299166FEE8 /* Pods_Finstagram_FinstagramUITests.framework */; };
@@ -87,6 +88,8 @@
 		1A62D4FE26979594000AA0A2 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		1A62D5002697B2DA000AA0A2 /* ProfilePostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilePostCell.h; sourceTree = "<group>"; };
 		1A62D5012697B2DA000AA0A2 /* ProfilePostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilePostCell.m; sourceTree = "<group>"; };
+		1A62D5032698E2AE000AA0A2 /* EditProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		1A62D5042698E2AE000AA0A2 /* EditProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		2AAB349911D206C12C68E15A /* Pods-Finstagram-FinstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finstagram-FinstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finstagram-FinstagramUITests/Pods-Finstagram-FinstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		450C84CFA4838E0140B40D23 /* Pods_FinstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		465A5D047A41800B1E8F7FB7 /* Pods-FinstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinstagramTests.release.xcconfig"; path = "Target Support Files/Pods-FinstagramTests/Pods-FinstagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				1A62D4FB26965FB0000AA0A2 /* InfiniteScrollActivityView.m */,
 				1A62D4FD26979594000AA0A2 /* ProfileViewController.h */,
 				1A62D4FE26979594000AA0A2 /* ProfileViewController.m */,
+				1A62D5032698E2AE000AA0A2 /* EditProfileViewController.h */,
+				1A62D5042698E2AE000AA0A2 /* EditProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 			files = (
 				1A62D4B22694E75D000AA0A2 /* ViewController.m in Sources */,
 				1A62D4AC2694E75D000AA0A2 /* AppDelegate.m in Sources */,
+				1A62D5052698E2AE000AA0A2 /* EditProfileViewController.m in Sources */,
 				1A62D4F92696486B000AA0A2 /* DetailsViewController.m in Sources */,
 				1A62D4F2269502E6000AA0A2 /* ComposeViewController.m in Sources */,
 				1A62D4FC26965FB0000AA0A2 /* InfiniteScrollActivityView.m in Sources */,

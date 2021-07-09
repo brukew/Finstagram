@@ -24,6 +24,8 @@
     formatter.timeStyle = NSDateFormatterNoStyle;
     NSString *createdAtString = [formatter stringFromDate:self.post.createdAt];
     self.timestampLabel.text = createdAtString;
+    self.userLabel.text = self.post[@"author"][@"username"];
+    self.userLabel2.text = self.post[@"author"][@"username"];
 }
 
 /*

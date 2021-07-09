@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 @property (strong, nonatomic) Post *post;
 @property (nonatomic, weak) id<DetailsViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *userLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userLabel2;
 
 @end
 
