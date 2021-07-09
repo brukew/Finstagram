@@ -163,8 +163,7 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"composeSegue"]){
-        UINavigationController *navigationController = [segue destinationViewController];
-        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+        ComposeViewController *composeController = [segue destinationViewController];
         composeController.delegate = self;
     }
     if ([segue.identifier isEqual:@"detailsSegue"]){
