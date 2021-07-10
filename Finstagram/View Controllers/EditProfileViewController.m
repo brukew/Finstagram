@@ -44,7 +44,6 @@
         NSURL * imageURL = [NSURL URLWithString:profileImage.url];
         [self.profilePicView setImageWithURL:imageURL];
     }
-    // Do any additional setup after loading the view.
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView

@@ -19,7 +19,7 @@
 
 @interface HomeViewController () <DetailsViewControllerDelegate, ComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray *arrayOfPosts;
+@property (strong, nonatomic) NSArray *arrayOfPosts;
 @property (nonatomic) NSInteger limit;
 @property (assign, nonatomic) BOOL isMoreDataLoading;
 
@@ -30,6 +30,7 @@
 InfiniteScrollActivityView* loadingMoreView;
 NSString *CellIdentifier = @"PostCell";
 NSString *HeaderViewIdentifier = @"TableViewHeaderView";
+NSString *comeFrom;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +38,7 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
     self.tableView.dataSource = self;
     self.limit = 20;
     self.isMoreDataLoading = false;
-    // [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+    
     [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:HeaderViewIdentifier];
     [self refresh];
     
@@ -62,6 +63,7 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
     }];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    //need to use keyWindow
     [[UIApplication sharedApplication].keyWindow setRootViewController: loginViewController];
     }
 
@@ -92,8 +94,6 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
         if (posts != nil) {
             self.arrayOfPosts = posts;
             [self.tableView reloadData];
-        } else {
-            NSLog(@"%@", error.localizedDescription);
         }
     }];
     
@@ -160,10 +160,10 @@ NSString *HeaderViewIdentifier = @"TableViewHeaderView";
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"composeSegue"]){
         ComposeViewController *composeController = [segue destinationViewController];
+        comeFrom = @"home";
         composeController.delegate = self;
     }
     if ([segue.identifier isEqual:@"detailsSegue"]){

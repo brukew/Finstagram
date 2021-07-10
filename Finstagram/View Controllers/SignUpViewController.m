@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (IBAction)registerUser:(id)sender {
@@ -34,7 +33,6 @@
     // call sign up function on the object
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
-            NSLog(@"Error: %@", error.localizedDescription);
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid Sign Up"
                                                                            message:@"Try Again."
                                                                            preferredStyle:(UIAlertControllerStyleAlert)];
@@ -47,13 +45,9 @@
             [alert addAction:okAction];
             
             [self presentViewController:alert animated:YES completion:^{
-                // optional code for what happens after the alert controller has finished presenting
             }];
         } else {
-            NSLog(@"User registered successfully");
             [self performSegueWithIdentifier:@"SignUpSegue" sender:nil];
-            
-            // manually segue to logged in view
         }
     }];
 }

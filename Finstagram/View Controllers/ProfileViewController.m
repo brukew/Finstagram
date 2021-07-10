@@ -116,6 +116,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"detailsFromProfileSegue"]){
+        [self refresh];
         UICollectionViewCell *tappedCell = sender;
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
         DetailsViewController *detailsController = [segue destinationViewController];

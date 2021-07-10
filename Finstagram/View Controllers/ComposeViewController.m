@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UIImage *resizedImage;
 @property (weak, nonatomic) IBOutlet UITextField *captionField;
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
+@property (strong, nonatomic) NSString *comeFrom;
 
 @end
 
@@ -45,7 +46,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     self.resizedImage = [self resizeImage:editedImage withSize:CGSizeMake(398, 398)];
     
@@ -60,8 +60,13 @@
     self.captionField.text = @"Write a caption...";
     [self.postImageView setImage:[UIImage imageNamed:@"image_placeholder.png"]];
     [self.delegate didShare];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.tabBarController setSelectedIndex:0];
+    if ([self.comeFrom  isEqual: @"home"]){
+        self.comeFrom = nil;
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else{
+        [self.tabBarController setSelectedIndex:0];
+    }
     
     
 }
@@ -71,8 +76,6 @@
     [self dismissViewControllerAnimated:true completion:nil];
     
 }
-
-
 
 
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {

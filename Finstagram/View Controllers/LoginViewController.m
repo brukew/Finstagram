@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (IBAction)loginUser:(id)sender {
@@ -31,17 +30,13 @@
                                                                        message:@"Username and password required."
                                                                        preferredStyle:(UIAlertControllerStyleAlert)];
 
-        // create an OK action
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(UIAlertAction * _Nonnull action) {
-                                                                 // handle response here.
                                                          }];
-        // add the OK action to the alert controller
         [alert addAction:okAction];
         
         [self presentViewController:alert animated:YES completion:^{
-            // optional code for what happens after the alert controller has finished presenting
         }];
         
         

@@ -37,13 +37,11 @@ newPost.commentCount = @(0);
 
 + (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
 
-    // check if image is not nil
     if (!image) {
         return nil;
     }
 
     NSData *imageData = UIImagePNGRepresentation(image);
-    // get image data and check if that is not nil
     if (!imageData) {
         return nil;
     }
