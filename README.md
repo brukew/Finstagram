@@ -43,14 +43,13 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 General Walkthrough
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/8lLR49o" data-context="false" ><a href="//imgur.com/a/8lLR49o"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/8lLR49o" data-context="false" ><a href="//imgur.com/a/8lLR49o">General Walkthrough</a></blockquote>
 
 <br> </br>
 <br> </br>
 
 Stretch Profile Walkthrough
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/HKUX0LP"  ><a href="//imgur.com/a/HKUX0LP">Profile Page Walkthrough</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/HKUX0LP"  ><a href="//imgur.com/a/HKUX0LP">Profile Page Walkthrough</a></blockquote>
 
 GIF created with [Kap](https://getkap.co/).
 
