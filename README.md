@@ -43,7 +43,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 General Walkthrough
-<img src='https://imgur.com/8lLR49o' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/8lLR49o.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <br> </br>
 Stretch Profile Walkthrough
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/HKUX0LP"  ><a href="//imgur.com/a/HKUX0LP">Profile Page Walkthrough</a></blockquote>
